@@ -32,11 +32,11 @@ export class ConverterComponent implements OnInit {
   }
 
   convertFirstNum(event: any): void{
-    this.firstNum = (event * this.selectedFirstOption) / this.selectedSecondOption;
+    this.firstNum = Number(((event * this.selectedFirstOption) / this.selectedSecondOption).toFixed(6));
   }
 
   convertSecondNum(event: any): void{
-    this.secondNum = (event * this.selectedSecondOption) / this.selectedFirstOption;
+    this.secondNum = Number(((event * this.selectedSecondOption) / this.selectedFirstOption).toFixed(6));
   }
 
   changeValue(): void{

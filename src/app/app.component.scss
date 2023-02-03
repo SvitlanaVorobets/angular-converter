@@ -1,0 +1,33 @@
+$white: #fff;
+$primary: #e61247;
+$dark-primary: #6b031d;
+$secondary: #777;
+
+.add-text{
+    margin: 20px;
+}
+
+a{
+    text-decoration: none;
+    border: 1px solid $primary;
+    padding: 10px 30px;
+    font-size: 16px;
+    background-color: $primary;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+
+    &:hover{
+    background-color: $dark-primary;
+    }
+}
+
+p{
+    margin: 20px 0;
+}
+
+footer{
+    padding: 20px;
+    color: $secondary;
+    font-size: 15px;
+}

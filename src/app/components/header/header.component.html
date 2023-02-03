@@ -1,0 +1,8 @@
+<div class="row-header">
+    <p class="header-title">Currency Converter</p>
+    <div class="row-rates">
+        <p class="row-rates__item" *ngFor="let it of rates">
+            {{it.symbol}} : {{it.currency}}
+        </p>
+    </div>
+</div>

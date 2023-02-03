@@ -1,0 +1,29 @@
+<div class="row-inputs">
+    <div class="row-inputs__item">
+        <label for="first">From</label>
+        <div>
+            <input type="text" #first [ngModel]="firstNum" (ngModelChange)="convertSecondNum($event)">
+            <select name="cur" id="cur1" [(ngModel)]="selectedFirstOption" (change)="convertFirstNum(second.value)">
+                <option *ngFor="let it of rates" [value]="it.currency">
+                    {{it.symbol}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="row-inputs__item">
+        <button (click)="changeValue()">
+            <mat-icon>compare_arrows</mat-icon>
+        </button>
+    </div>
+    <div class="row-inputs__item">
+        <label for="second">To</label>
+        <div>
+            <input type="text" #second [ngModel]="secondNum" (ngModelChange)="convertFirstNum($event)">
+            <select name="cur" id="cur2" [(ngModel)]="selectedSecondOption" (change)="convertSecondNum(first.value)">
+                <option *ngFor="let it of rates" [value]="it.currency">
+                    {{it.symbol}}
+                </option>
+            </select>
+        </div>  
+    </div>
+</div>
